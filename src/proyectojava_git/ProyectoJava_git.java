@@ -16,6 +16,7 @@ public class ProyectoJava_git {
      */
     public static void main(String[] args) {
         System.out.println("Primer proyecto en git...");
+        System.out.println("SOY ALUMNO MODIFICANDO PROYECTO!!!");
     }
     
 }

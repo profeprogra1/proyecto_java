@@ -2,7 +2,7 @@
 
 create database test01;
 use test01;
-<code>
+
 Database changed
 mysql> describe usuarios;
 +------------+-------------+------+-----+---------+----------------+
@@ -14,4 +14,3 @@ mysql> describe usuarios;
 +------------+-------------+------+-----+---------+----------------+
 3 rows in set (0.03 sec)
 
-</code>

@@ -1,5 +1,5 @@
 # proyecto_java
-
+```
 create database test01;
 use test01;
 
@@ -13,4 +13,5 @@ mysql> describe usuarios;
 | apellido   | varchar(50) | YES  |     | NULL    |                |
 +------------+-------------+------+-----+---------+----------------+
 3 rows in set (0.03 sec)
+```
 

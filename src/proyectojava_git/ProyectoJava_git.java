@@ -1,10 +1,6 @@
 package proyectojava_git;
 
 import com.proyectojava.conexion.Conexion;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
-import java.util.Scanner;
 
 public class ProyectoJava_git {
 

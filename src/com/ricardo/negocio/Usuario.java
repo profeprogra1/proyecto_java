@@ -46,4 +46,7 @@ public class Usuario {
     public void save(){
         con.setEjecutar("insert into usuarios(nombre,apellido) values('"+this.nombre+"','"+this.apellido+"')");
     }
+    public void delete(){
+        con.setEjecutar("delete from usuarios where usuario_id='"+this.usuario_id+"'");
+    }
 }

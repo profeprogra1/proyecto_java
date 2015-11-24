@@ -49,4 +49,7 @@ public class Usuario {
     public void delete(){
         con.setEjecutar("delete from usuarios where usuario_id='"+this.usuario_id+"'");
     }
+    public void update(){
+        con.setEjecutar("update usuarios set nombre='"+this.nombre+"',apellido='"+this.apellido+"' where usuario_id='"+this.usuario_id+"' ");
+    }
 }

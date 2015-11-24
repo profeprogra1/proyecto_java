@@ -14,9 +14,17 @@ public class ProyectoJava_git {
         System.out.println("APE:");
         String ape=in.nextLine();
         usuario.setApellido(ape);*/
+        //AGREGAR
         //usuario.save();
-        usuario.setUsuario_id(5);
-        usuario.delete();
+        //ELIMINAR
+       /* usuario.setUsuario_id(5);
+        usuario.delete();*/
+        //ACTUALIZAR
+        usuario.setUsuario_id(4);
+        usuario.setNombre("JUAN");
+        usuario.setApellido("PEREZ");
+        usuario.update();
+        
     }
 
 }

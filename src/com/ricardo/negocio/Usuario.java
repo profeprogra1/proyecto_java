@@ -44,6 +44,6 @@ public class Usuario {
         this.apellido = apellido;
     }
     public void save(){
-        con.setEjecutar("insert into usuarios(nombre,apellido) values('LA'.'LE')");
+        con.setEjecutar("insert into usuarios(nombre,apellido) values('LA','LE')");
     }
 }

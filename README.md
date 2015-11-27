@@ -124,5 +124,14 @@ mysql> select usuarios.nombre,ciudades.nombre,paises.nombre
 +---------+--------------+-----------+
 4 rows in set (0.04 sec)
 
+mysql> select usuarios.nombre as usuario,ciudades.nombre as ciudad,paises.nombre as pais from usuarios,ciudades,paises where usuarios.ciudad_id=ciudades.ciudad_id  and ciudades.pais_id=paises.pais_id and paises.nombre='CHILE';
++---------+----------+-------+
+| usuario | ciudad   | pais  |
++---------+----------+-------+
+| JUAN    | SANTIAGO | CHILE |
+| PETER   | ARICA    | CHILE |
++---------+----------+-------+
+2 rows in set (0.00 sec)
+
 ```
 

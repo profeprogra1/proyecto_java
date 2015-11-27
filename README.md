@@ -85,6 +85,15 @@ mysql> select * from usuarios;
 |          4 | PABLO   | RIVAS     |         4 |
 +------------+---------+-----------+-----------+
 4 rows in set (0.00 sec)
-
+mysql> select ciudades.nombre,paises.nombre from ciudades,paises where ciudades.pais_id=paises.pais_id;
++--------------+-----------+
+| nombre       | nombre    |
++--------------+-----------+
+| SANTIAGO     | CHILE     |
+| ARICA        | CHILE     |
+| TACNA        | PERU      |
+| RIO GALLEGOS | ARGENTINA |
++--------------+-----------+
+4 rows in set (0.00 sec)
 ```
 

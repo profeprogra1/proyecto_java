@@ -27,7 +27,7 @@ public class ProyectoJava_git {
         usuario.setApellido("PEREZ");
         usuario.update();*/
         
-        //TAREA PA LA CASA
+    
        /* LISTAR USUARIOS */
         List<Usuario> lista=usuario.list();
         for(Usuario u:lista){

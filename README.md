@@ -95,5 +95,18 @@ mysql> select ciudades.nombre,paises.nombre from ciudades,paises where ciudades.
 | RIO GALLEGOS | ARGENTINA |
 +--------------+-----------+
 4 rows in set (0.00 sec)
+
+mysql> select usuarios.nombre,usuarios.apellido,ciudades.nombre
+    -> from usuarios, ciudades
+    -> where usuarios.ciudad_id=ciudades.ciudad_id;
++---------+-----------+--------------+
+| nombre  | apellido  | nombre       |
++---------+-----------+--------------+
+| JUAN    | PEREZ     | SANTIAGO     |
+| PETER   | CONTRERAS | ARICA        |
+| ROBERTO | ROJAS     | TACNA        |
+| PABLO   | RIVAS     | RIO GALLEGOS |
++---------+-----------+--------------+
+4 rows in set (0.04 sec)
 ```
 

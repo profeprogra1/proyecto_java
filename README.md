@@ -41,5 +41,18 @@ Query OK, 1 row affected (0.00 sec)
 mysql> insert into ciudades(nombre,pais_id) values('RIO GALLEGOS',3);
 Query OK, 1 row affected (0.00 sec)
 
+mysql> insert into usuarios(nombre,apellido,ciudad_id) 
+    -> values('JUAN','PEREZ',1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into usuarios(nombre,apellido,ciudad_id)  values('PETER','CONTRERAS',2);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into usuarios(nombre,apellido,ciudad_id)  values('ROBERTO','ROJAS',3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into usuarios(nombre,apellido,ciudad_id)  values('PABLO','RIVAS',4);
+Query OK, 1 row affected (0.00 sec)
+
 ```
 

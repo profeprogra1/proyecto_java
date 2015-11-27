@@ -108,5 +108,21 @@ mysql> select usuarios.nombre,usuarios.apellido,ciudades.nombre
 | PABLO   | RIVAS     | RIO GALLEGOS |
 +---------+-----------+--------------+
 4 rows in set (0.04 sec)
+
+mysql> select usuarios.nombre,ciudades.nombre,paises.nombre
+    -> from usuarios,ciudades,paises
+    -> where usuarios.ciudad_id=ciudades.ciudad_id 
+    -> and
+    -> ciudades.pais_id=paises.pais_id;
++---------+--------------+-----------+
+| nombre  | nombre       | nombre    |
++---------+--------------+-----------+
+| JUAN    | SANTIAGO     | CHILE     |
+| PETER   | ARICA        | CHILE     |
+| ROBERTO | TACNA        | PERU      |
+| PABLO   | RIO GALLEGOS | ARGENTINA |
++---------+--------------+-----------+
+4 rows in set (0.04 sec)
+
 ```
 

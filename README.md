@@ -13,5 +13,16 @@ mysql> describe usuarios;
 | apellido   | varchar(50) | YES  |     | NULL    |                |
 +------------+-------------+------+-----+---------+----------------+
 3 rows in set (0.03 sec)
+
+mysql> create table paises(
+    -> pais_id int(10) primary key not null auto_increment,
+    -> nombre varchar(250));
+Query OK, 0 rows affected (0.14 sec)
+
+mysql> create table ciudades(
+    -> ciudad_id int(10) primary key not null auto_increment,
+    -> nombre varchar(250),
+    -> pais_id int(10));
+
 ```
 

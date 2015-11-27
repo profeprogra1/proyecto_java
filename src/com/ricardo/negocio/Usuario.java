@@ -79,9 +79,10 @@ public class Usuario {
     public List list(){
         List<Usuario> lista=new ArrayList<Usuario>();
         con.setSeleccion("select * from usuarios");
-        Usuario user=new Usuario();
+        Usuario user;
         try{
             while(con.getRs().next()){
+                user=new Usuario();
                 user.setUsuario_id(con.getRs().getInt("usuario_id"));
                 user.setNombre(con.getRs().getString("nombre"));
                 user.setApellido(con.getRs().getString("apellido"));

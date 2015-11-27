@@ -29,6 +29,10 @@ public class ProyectoJava_git {
         
         //TAREA PA LA CASA
        /* LISTAR USUARIOS */
+        List<Usuario> lista=usuario.list();
+        for(Usuario u:lista){
+            System.out.println("NOMBRE:"+u.getNombre());
+        }
         
     }
 

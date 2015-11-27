@@ -6,22 +6,43 @@
 package com.ricardo.negocio;
 
 import com.ricardo.Conexion.Conexion;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author ricardo
  */
 public class Usuario {
+
     private int usuario_id;
     private String nombre;
     private String apellido;
+    private int ciudad_id;
     Conexion con;
+
     public Usuario() {
-        con=new Conexion();
+        con = new Conexion();
     }
 
     public int getUsuario_id() {
         return usuario_id;
+    }
+
+    public int getCiudad_id() {
+        return ciudad_id;
+    }
+
+    public void setCiudad_id(int ciudad_id) {
+        this.ciudad_id = ciudad_id;
+    }
+
+    public Conexion getCon() {
+        return con;
+    }
+
+    public void setCon(Conexion con) {
+        this.con = con;
     }
 
     public void setUsuario_id(int usuario_id) {
@@ -43,13 +64,33 @@ public class Usuario {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
-    public void save(){
-        con.setEjecutar("insert into usuarios(nombre,apellido) values('"+this.nombre+"','"+this.apellido+"')");
+
+    public void save() {
+        con.setEjecutar("insert into usuarios(nombre,apellido,ciudad_id) values('" + this.nombre + "','" + this.apellido + "','"+this.ciudad_id+"')");
     }
-    public void delete(){
-        con.setEjecutar("delete from usuarios where usuario_id='"+this.usuario_id+"'");
+
+    public void delete() {
+        con.setEjecutar("delete from usuarios where usuario_id='" + this.usuario_id + "'");
     }
-    public void update(){
-        con.setEjecutar("update usuarios set nombre='"+this.nombre+"',apellido='"+this.apellido+"' where usuario_id='"+this.usuario_id+"' ");
+
+    public void update() {
+        con.setEjecutar("update usuarios set nombre='" + this.nombre + "',apellido='" + this.apellido + "',ciudad_id='"+this.ciudad_id+"' where  usuario_id='" + this.usuario_id + "'");
     }
+    public List list(){
+        List<Usuario> lista=new ArrayList<Usuario>();
+        con.setSeleccion("select * from usuarios");
+        Usuario user=new Usuario();
+        try{
+            while(con.getRs().next()){
+                user.setUsuario_id(con.getRs().getInt("usuario_id"));
+                user.setNombre(con.getRs().getString("nombre"));
+                user.setApellido(con.getRs().getString("apellido"));
+                lista.add(user);
+            }
+        }catch(Exception ex){
+            System.out.println("ERROr"+ex.getMessage());
+        }
+        return lista;
+    }
+    
 }

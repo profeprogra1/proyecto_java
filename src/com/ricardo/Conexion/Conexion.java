@@ -6,11 +6,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public class Conexion {
-
     Connection con;
     Statement stmt;
     ResultSet rs;
@@ -41,5 +39,26 @@ public class Conexion {
         }
     }
     
+    public void setSeleccion(String sql){
+        try{
+            stmt=con.createStatement();
+            rs=stmt.executeQuery(sql);
+        
+        }catch(Exception ex)
+        {
+            System.out.println("ERROR SELECCION:"+ex.getMessage());
+        }
+    }
+    
+    public ResultSet getRs(){
+        return rs;
+    }
+    
+    
+    
+    
+    
+    
+   
 
 }

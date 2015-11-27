@@ -1,7 +1,9 @@
 package proyectojava_git;
 
 import com.ricardo.negocio.Usuario;
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class ProyectoJava_git {
 
@@ -20,10 +22,11 @@ public class ProyectoJava_git {
        /* usuario.setUsuario_id(5);
         usuario.delete();*/
         //ACTUALIZAR
-        usuario.setUsuario_id(4);
+       /* usuario.setUsuario_id(4);
         usuario.setNombre("JUAN");
         usuario.setApellido("PEREZ");
-        usuario.update();
+        usuario.update();*/
+       
         
     }
 

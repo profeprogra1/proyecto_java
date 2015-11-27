@@ -54,5 +54,37 @@ Query OK, 1 row affected (0.00 sec)
 mysql> insert into usuarios(nombre,apellido,ciudad_id)  values('PABLO','RIVAS',4);
 Query OK, 1 row affected (0.00 sec)
 
+mysql> select * from paises;
++---------+-----------+
+| pais_id | nombre    |
++---------+-----------+
+|       1 | CHILE     |
+|       2 | PERU      |
+|       3 | ARGENTINA |
++---------+-----------+
+3 rows in set (0.00 sec)
+
+mysql> select * from ciudades;
++-----------+--------------+---------+
+| ciudad_id | nombre       | pais_id |
++-----------+--------------+---------+
+|         1 | SANTIAGO     |       1 |
+|         2 | ARICA        |       1 |
+|         3 | TACNA        |       2 |
+|         4 | RIO GALLEGOS |       3 |
++-----------+--------------+---------+
+4 rows in set (0.00 sec)
+
+mysql> select * from usuarios;
++------------+---------+-----------+-----------+
+| usuario_id | nombre  | apellido  | ciudad_id |
++------------+---------+-----------+-----------+
+|          1 | JUAN    | PEREZ     |         1 |
+|          2 | PETER   | CONTRERAS |         2 |
+|          3 | ROBERTO | ROJAS     |         3 |
+|          4 | PABLO   | RIVAS     |         4 |
++------------+---------+-----------+-----------+
+4 rows in set (0.00 sec)
+
 ```
 
